@@ -62,7 +62,9 @@ Bar in which the user can enter search terms and filter
 			<iron-icon icon="[[icon]]" class="icon"></iron-icon>
 			<input is="iron-input" id="input" bind-value="{{query}}" placeholder="[[placeholder]]" class="flex" disabled="[[!_enabled]]"></input>
 		</div>
-		<paper-icon-button hidden$="[[hideClearButton]]" icon="clear" hidden$="[[!query]]" on-tap="_clear" class="icon"></paper-icon-button>
+		<div hidden$="[[hideClearButton]]">
+			<paper-icon-button icon="clear" hidden$="[[!query]]" on-tap="_clear" class="icon"></paper-icon-button>
+		</div>
 		<div hidden$="[[hideFilterButton]]">
 			<paper-icon-button id="filter" icon="image:tune" on-tap="_filter" class="icon"></paper-icon-button>
 			<paper-badge for="filter" label="[[nrSelectedFilters]]" class="badge" hidden$="[[!nrSelectedFilters]]"></paper-badge>
